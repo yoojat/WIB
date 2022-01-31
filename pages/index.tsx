@@ -25,10 +25,16 @@ const BannerImageContainer = styled.div`
 const ContentContainer = styled.div`
   position: absolute;
   margin-top: 150px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 `;
 
 const TitleContainer = styled.div`
-  padding: 20px;
+  padding: 50px;
+  width: 100%;
+  max-width: 1200px;
+  color: ${(props) => props.theme.color.blue9};
 `;
 const Title = styled.h1`
   font-size: 46px;
@@ -48,7 +54,7 @@ const Home: NextPage = () => {
       <BannerContainer>
         <BannerImageContainer>
           <Image
-            src={'/banner.jpg'}
+            src={'/banner.png'}
             alt={'Website In Busan'}
             layout='fill'
             priority={true}

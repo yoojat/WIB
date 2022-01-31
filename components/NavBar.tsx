@@ -16,11 +16,12 @@ const Wrapper = styled.div`
 `;
 const NavContainer = styled.nav`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   width: 100%;
   padding: 20px;
   max-width: 1200px;
+  height: 100vh;
   z-index: 1000;
 `;
 
@@ -36,22 +37,27 @@ const MenuContainer = styled.div`
   font-size: 16px;
   font-weight: 600;
   letter-spacing: 0.02em;
+  margin-top: 20px;
+  color: white;
+
   a {
     padding: 15px;
 
     &:hover {
-      color: ${(props) => props.theme.color.thirdBlue};
+      color: ${(props) => props.theme.color.blue2};
     }
   }
 `;
 
 const MenuBarContainer = styled.div`
+  display: none;
   ${media.pc} {
     display: none;
   }
   ${media.tablet} {
     display: inherit;
   }
+  margin-top: 10px;
   cursor: pointer;
   z-index: 999;
 
@@ -65,7 +71,7 @@ const MenuBarContainer = styled.div`
 `;
 
 const SideMenuContainer = styled.div<{ isSideMenuShow: boolean }>`
-  background-color: ${(props) => props.theme.color.fifthBlue};
+  background-color: ${(props) => props.theme.color.blue8};
   left: ${(props) => (props.isSideMenuShow ? 0 : '-100%')};
   opacity: ${(props) => (props.isSideMenuShow ? 1 : 0)};
   top: 0;
@@ -77,6 +83,9 @@ const SideMenuContainer = styled.div<{ isSideMenuShow: boolean }>`
     display: none;
   }
   ${media.tablet} {
+    display: inherit;
+  }
+  ${media.mobile} {
     display: inherit;
   }
 `;
@@ -93,7 +102,7 @@ const SideMenuItem = styled.div`
   padding: 5px;
   cursor: pointer;
   &:hover {
-    color: ${(props) => props.theme.color.thirdBlue};
+    color: ${(props) => props.theme.color.blue5};
   }
 `;
 

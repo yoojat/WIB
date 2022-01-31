@@ -11,6 +11,9 @@ export const GlobalStyle = createGlobalStyle`
     ::-webkit-scrollbar {
         display: none;
     }
+    *{
+        box-sizing:border-box;
+    }
     html{
         font-size: 11px;
         -webkit-text-size-adjust: none;
@@ -22,6 +25,9 @@ export const GlobalStyle = createGlobalStyle`
         -ms-overflow-style: none;
         scrollbar-width: none;
     }
+    body{
+        background-color:#F6F7FC;
+    }
     button {
         background: none;
         padding: 0;
@@ -32,6 +38,7 @@ export const GlobalStyle = createGlobalStyle`
             fill: #f2f3f4;
         }
     }
+    
     a {
         color: inherit; /* blue colors for links too */
         text-decoration: inherit; /* no underline */
